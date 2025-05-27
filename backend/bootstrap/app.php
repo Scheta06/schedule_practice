@@ -15,9 +15,6 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         HandleCors::class;
-        $middleware->alias([
-            'admin' => AdminMiddleware::class,
-        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

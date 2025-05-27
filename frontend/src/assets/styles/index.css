@@ -1,32 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
-h1 {
-    font-size: var(--font-size0);
-    color: var(--color4);
-    letter-spacing: 4px;
-}
-
-h2 {
-
-}
-
-h3 {
-    font-size: var(--font-size2);
-    color: var(--color4);
-}
-
-html {
-    font-family: "Inconsolata", monospace;
-    font-size: 16px;
-    font-weight: normal;
-}
-
-body {
-    width: 100%;
+* {
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    color: var(--color2);
+}
+
+button {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: var(--font-size0);
+    letter-spacing: 4px;
+}
+
+h3 {
+    font-size: var(--font-size2);
 }
 
 a {
@@ -34,7 +29,8 @@ a {
 }
 
 .container {
-    height: 100vh;
+    padding: 100px 200px;
+    height: calc(100vh - 100px);
 }
 
 :root {
@@ -57,11 +53,18 @@ a {
     --font-size3: 2.25rem;
     --font-size4: 1.25rem;
 
+    /* Основные bold-ы шрифтов */
+
+    --bold: 900;
+    --semi-bold: 600;
+    --regular: 400;
+
     /*Основные скругления*/
 
     --border-radius0: 10px;
     --border-radius1: 8px;
     --border-radius2: 6px;
+    --border-radius3: 4px;
 
     /*Основные отступы*/
 
@@ -69,6 +72,7 @@ a {
     --gap30: 30px;
     --gap20: 20px;
 
+    --pg150: 150px;
     --pg40: 40px;
     --pg30: 30px;
     --pg20: 20px;
@@ -123,6 +127,13 @@ a {
     flex-direction: column;
 }
 
+.full-center-column-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
 .center {
     display: flex;
     justify-content: center;
@@ -132,12 +143,4 @@ a {
 .primary-btn {
     background-color: var(--color1);
     border-radius: var(--border-radius2);
-}
-
-.input {
-    min-height: 60px;
-    width: 100%;
-    border: 2px solid var(--color7);
-    padding-left: 35px;
-    font-size: var(--font-size2);
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Auth\ProfileController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -15,12 +16,8 @@ Route::get('/register', [RegisterController::class, 'index'])->name('registerFor
 Route::post('/register', [RegisterController::class, 'create'])->name('register');
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
     Route::get('/logout', [LoginController::class, 'index'])->name('logout');
 
-    Route::get('/cars', [CarController::class, 'index'])->name('carForm');
-});
-
-Route::middleware(['auth', 'admin'])->group(function () {
-    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/cars', [CarController::class, 'index'])->name('userCars');
+    Route::get('/cars/{id}', [CarController::class, 'show'])->name('carCart');
 });
