@@ -2,21 +2,21 @@
 
 namespace Database\Seeders;
 
-use App\Models\Mark;
+use App\Models\ExtenceCategory;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class MarkSeeder extends Seeder
+class ExtenceCategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $array = config('constants.seed.MarkSeeder');
+        $array = config('constants.seed.ExtenceCategorySeeder');
 
         foreach($array as $item) {
-            Mark::create($item);
+            ExtenceCategory::create($item);
         }
     }
 }

@@ -9,19 +9,19 @@ class Car extends Model
     protected $fillable = [
         'title',
         'user_id',
-        'pattern_id',
-        'extense_id',
+        'mark_id',
+        'extence_id',
     ];
 
     public function user() {
         return $this->belongsTo(User::class);
     }
 
-    public function pattern() {
-        return $this->belongsTo(Pattern::class);
+    public function mark() {
+        return $this->belongsTo(Mark::class);
     }
 
     public function extence() {
-        return $this->belongsTo(Extense::class);
+        return $this->belongsTo(Extence::class);
     }
 }

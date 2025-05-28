@@ -13,23 +13,23 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->nullable();
+            $table->string('title');
+
             $table->foreignId('user_id')
                 ->references('id')
                 ->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->foreignId('pattern_id')
+            $table->foreignId('mark_id')
                 ->references('id')
-                ->on('patterns')
+                ->on('marks')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-            $table->foreignId('extense_id')
+            $table->foreignId('extence_id')
                 ->references('id')
-                ->on('extenses')
+                ->on('extences')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
-
             $table->timestamps();
         });
     }

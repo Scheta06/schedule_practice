@@ -13,9 +13,9 @@ class CarSeeder extends Seeder
      */
     public function run(): void
     {
-        $Array = config('constants.seed.CarSeeder');
+        $array = config('constants.seed.CarSeeder');
 
-        foreach($Array as $item) {
+        foreach($array as $item) {
             Car::create($item);
         }
     }

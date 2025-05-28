@@ -13,11 +13,17 @@
 
 button {
     cursor: pointer;
+    background-color: var(--color7);
+    border-radius: var(--border-radius2);
 }
 
 h1 {
     font-size: var(--font-size0);
     letter-spacing: 4px;
+}
+
+h2 {
+    font-size: var(--font-size1);
 }
 
 h3 {
@@ -30,7 +36,7 @@ a {
 
 .container {
     padding: 100px 200px;
-    height: calc(100vh - 100px);
+    height: 100%;
 }
 
 :root {
@@ -143,4 +149,14 @@ a {
 .primary-btn {
     background-color: var(--color1);
     border-radius: var(--border-radius2);
+}
+
+@media (max-width:768px) {
+    * {
+        font-size: 12px;
+    }
+
+    .container {
+        padding: var(--pg40);
+    }
 }

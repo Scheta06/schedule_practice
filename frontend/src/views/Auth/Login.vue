@@ -11,7 +11,7 @@
 
 <script setup>
 import { reactive } from 'vue'
-import api from './../services/api.js'
+import api from '../../services/api.js'
 const inputValues = reactive([
     {
         title: 'E-mail',

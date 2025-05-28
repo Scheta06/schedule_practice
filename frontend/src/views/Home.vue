@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <the-header></the-header>
     <Welcome></Welcome>
-  </div>
 </template>
 
 <script setup>

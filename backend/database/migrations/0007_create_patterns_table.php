@@ -15,15 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
 
-            $table->foreignId('marks_id')
-                ->references('id')
-                ->on('marks')->onDelete('cascade')
-                ->onUpdate('cascade');
-            $table->foreignId('generation_id')
-                ->references('id')
-                ->on('generations')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            $table->foreignId('mark_id')->references('id')->on('marks')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

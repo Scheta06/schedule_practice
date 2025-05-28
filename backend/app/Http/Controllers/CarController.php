@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Car;
 use Illuminate\Http\Request;
 
 class CarController extends Controller
@@ -19,7 +20,16 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'title' => 'string|required',
+            'user_id' => 'integer|required',
+            'extence_id' => 'integer|required',
+            'mark_id' => 'integer|required',
+        ]);
+
+        Car::create($data);
+
+        return response()->json('Автомобиль успешно создан');
     }
 
     /**

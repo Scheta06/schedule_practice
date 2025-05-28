@@ -7,10 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Generation extends Model
 {
     protected $fillable = [
-        'title'
+        'title',
+        'pattern_id',
     ];
 
     public function pattern() {
-        return $this->hasMany(Pattern::class, 'generation_id');
+        return $this->belongsTo(Pattern::class);
     }
 }

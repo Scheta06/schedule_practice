@@ -2,21 +2,21 @@
 
 namespace Database\Seeders;
 
-use App\Models\Extense;
+use App\Models\Extence;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ExtenseSeeder extends Seeder
+class ExtenceSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        $Array = config('constants.seed.ExtenseSeeder');
+        $array = config('constants.seed.ExtenceSeeder');
 
-        foreach($Array as $item) {
-            Extense::create($item);
+        foreach($array as $item) {
+            Extence::create($item);
         }
     }
 }

@@ -11,6 +11,6 @@ class Mark extends Model
     ];
 
     public function pattern() {
-        return $this->hasMany(Pattern::class, 'marks_id');
+        return $this->hasMany(Pattern::class, 'mark_id');
     }
 }

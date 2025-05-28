@@ -13,9 +13,9 @@ class PatternSeeder extends Seeder
      */
     public function run(): void
     {
-        $Array = config('constants.seed.PatternSeeder');
+        $array = config('constants.seed.PatternSeeder');
 
-        foreach($Array as $item) {
+        foreach($array as $item) {
             Pattern::create($item);
         }
     }

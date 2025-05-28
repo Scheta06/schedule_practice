@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Generation;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class GenerationSeeder extends Seeder
@@ -12,12 +13,10 @@ class GenerationSeeder extends Seeder
      */
     public function run(): void
     {
-        $Array = config('constants.seed.GenerationSeeder');
+        $array = config('constants.seed.GenerationSeeder');
 
-        foreach ($Array as $item) {
-            Generation::create([
-                'title' => $item,
-            ]);
+        foreach($array as $item) {
+            Generation::create($item);
         }
     }
 }

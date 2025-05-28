@@ -8,14 +8,14 @@ class Pattern extends Model
 {
     protected $fillable = [
         'title',
-        'marks_id',
+        'mark_id',
     ];
 
     public function mark() {
-        return $this->belongsTo(Mark::class);
+        return $this->hasMany(Mark::class);
     }
 
-    public function car() {
-        return $this->hasMany(Car::class, 'patterd_id');
+    public function generation() {
+        return $this->hasMany(Generation::class, 'pattern_id');
     }
 }

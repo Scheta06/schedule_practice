@@ -11,21 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('extenses', function (Blueprint $table) {
+        Schema::create('extences', function (Blueprint $table) {
             $table->id();
             $table->string('title');
             $table->float('cost');
 
-            $table->foreignId('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
-            $table->foreignId('category_id')
-                ->references('id')
-                ->on('categories')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            $table->foreignId('category_id')->references('id')->on('extence_categories')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -35,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('extenses');
+        Schema::dropIfExists('extences');
     }
 };

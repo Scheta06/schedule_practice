@@ -49,11 +49,11 @@ class User extends Authenticatable
         ];
     }
 
-    public function car() {
-        return $this->hasMany(Car::class, 'user_id');
+    public function extenceCategory() {
+        return $this->hasMany(ExtenceCategory::class, 'user_id');
     }
 
-    public function extence() {
-        return $this->hasMany(Extense::class, 'user_id');
+    public function car() {
+        return $this->hasMany(Car::class, 'user_id');
     }
 }

@@ -11,64 +11,69 @@ return [
             'password' => '123123123',
             'role' => 'admin',
         ],
+        /*Начальные данные для категорий расходов*/
+        'ExtenceCategorySeeder' => [
+            [
+                'title' => 'Бензин',
+                'user_id' => 1,
+            ],
+            [
+                'title' => 'Штрафы',
+                'user_id' => 1,
+            ],
+        ],
         /*Начальные данные для марок авто*/
         'MarkSeeder' => [
-            'toyota',
-            'mazda',
-            'nissan',
-            'mitsubishi',
-        ],
-        /*Начальные данные для категорий*/
-        'CategorySeeder' => [
-            'Ежегодное ТО',
-            'Штрафы',
-            'Бензин',
-            'Страховка',
-            'Другое',
-        ],
-        /*Начальные данные для поколений авто*/
-        'GenerationSeeder' => [
-            'x100',
-            'x90',
-            'VIII',
-            'VII',
-            'VI',
-            'V',
+            [
+                'title' => 'toyota'
+            ],
+            [
+                'title' => 'mazda'
+            ],
+            [
+                'title' => 'nissan'
+            ],
+            [
+                'title' => 'mitsubishi'
+            ],
         ],
         /*Начальные данные для моделей авто*/
         'PatternSeeder' => [
             [
                 'title' => 'mark 2',
-                'marks_id' => 1,
-                'generation_id' => 1,
+                'mark_id' => 1,
             ],
             [
-                'title' => 'corolla levin',
-                'marks_id' => 1,
-                'generation_id' => 5,
+                'title' => 'galant',
+                'mark_id' => 4,
+            ],
+        ],
+        /*Начальные данные для поколений авто*/
+        'GenerationSeeder' => [
+            [
+                'title' => 'x100',
+                'pattern_id' => 1,
+            ],
+            [
+                'title' => '8',
+                'pattern_id' => 2,
             ],
         ],
         /*Начальные данные для расходов на авто*/
-        'ExtenseSeeder' => [
+        'ExtenceSeeder' => [
             [
-                'title' => 'Забыл оплатить штраф',
-                'cost' => 800,
-                'user_id' => 1,
-                'category_id' => 2,
-            ],
-            [
-                'title' => 'Записался на ТО',
-                'cost' => 20000,
-                'user_id' => 1,
-                'category_id' => 1,
+                'title' => 'Оплатил бензин на 1000р 60л',
+                'cost' => 1000,
+                'category_id' => 1
             ],
         ],
         /*Начальные данные для авто пользователя*/
         'CarSeeder' => [
             [
+                'title' => 'Бешенная табуретка',
                 'user_id' => 1,
-                'pattern_id' => 1,
-                'extense_id' => 1,
+                'mark_id' => 1,
+                'extence_id' => 1,
             ],
         ],
     ],
